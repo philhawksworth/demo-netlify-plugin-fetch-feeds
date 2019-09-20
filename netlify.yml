@@ -5,16 +5,21 @@ build:
 
 plugins:
   - ./plugins/rss-data-fetch:
+    # Make the content from these feeds available to templates
+    # in our SSG via a collection with a given name
       feeds:
-        # - name: used as a key for accessing date later
+        # - name: used as a key for our data collection
         #   url: where to find this resource, in xml or json format
         #   ttl: don't fetch this again if cached less than this many seconds ago
-        - name: hawksworx
-          url: https://hawksworx.com/feed.json
-          ttl: 180
         - name: netlify
           url: https://www.netlify.com/blog/index.xml
           ttl: 3600
+        - name: medium
+          url: https://medium.com/feed/netlify
+          ttl: 3600
+        - name: hawksworx
+          url: https://hawksworx.com/feed.json
+          ttl: 180
         - name: dwells
           url: https://davidwells.io/rss.xml
           ttl: 180

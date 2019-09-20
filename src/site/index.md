@@ -1,13 +1,28 @@
 ---
-title: EleventyOne
-subtitle: A project scaffold for getting building with Eleventy quickly.<br /> Made by <a href="https://twitter.com/philhawksworth">Phil</a> for <a href="https://twitter.com/philhawksworth">Phil</a>, but perhaps you might also find it useful.
+title: RSS plugin
+subtitle: Get data from RSS feeds so that our static sited generator can use it in its templates.
 layout: layouts/base.njk
 ---
 
+Entries from differnet RSS feeds are available to use in the static site generator which generated this site thanks to the Netlify plugin which sources them. Once sourced, they can be used in the temapltes via a collections. Adding more RSS feeds to include in template is as simple as adding to <a href="{{ pkg.repository.url }}blob/master/netlify.yml">the netlify.yml config.</a>
 
-## RSS Feeds
 
-<h2> Hawksworx</h2>
+<h2>Netlify blog</h2>
+<ul class="listing">
+{%- for item in netlify.items.slice(0,5) -%}
+  <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+{%- endfor -%}
+</ul>
+
+<h2>Netlify on Medium</h2>
+<ul class="listing">
+{%- for item in medium.items.slice(0,5) -%}
+  <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+{%- endfor -%}
+</ul>
+
+
+<h2>Hawksworx</h2>
 <ul class="listing">
 {%- for item in hawksworx.entries.slice(0,5) -%}
   <li><a href="{{ item.link }}">{{ item.title }}</a></li>
@@ -15,15 +30,7 @@ layout: layouts/base.njk
 </ul>
 
 
-<h2>Netlify</h2>
-<ul class="listing">
-{%- for item in netlify.items.slice(0,5) -%}
-  <li><a href="{{ item.link }}">{{ item.title }}</a></li>
-{%- endfor -%}
-</ul>
-
-
-<h2>DWells</h2>
+<h2>Mr DWells</h2>
 <ul class="listing">
 {%- for item in dwells.items.slice(0,5) -%}
   <li><a href="{{ item.link }}">{{ item.title }}</a></li>

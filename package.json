@@ -1,18 +1,17 @@
 {
-  "name": "EleventyOne",
-  "version": "3.0.0",
-  "description": "A project bootstrap for Eleventy sites. With pipelines for PostCSS, JavaScript, and serverless functions",
+  "name": "BuildTestBuild",
+  "version": "1.0.0",
+  "description": "Experimenting with the Netlify BuildBot",
   "author": "Phil Hawksworth",
   "license": "MIT",
   "scripts": {
     "start": "npm run dev",
     "dev": "cross-env ELEVENTY_ENV=dev eleventy --serve",
-    "build": "cross-env ELEVENTY_ENV=prod eleventy",
-    "seed": "cross-env ELEVENTY_ENV=seed eleventy"
+    "build": "cross-env ELEVENTY_ENV=prod eleventy"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/philhawksworth/eleventyone"
+    "url": "https://github.com/philhawksworth/test-build/"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.8.3",
