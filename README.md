@@ -48,3 +48,8 @@ MAke more RSS feeds available to the SSG by defining them in the netlify.yml fil
         ttl: 180
 
 ```
+
+## Known issues
+
+- Async operations in one Netlify Build life-cycle event are not guaranteed to have completed before the next event fires. Fetching RSS needs to handle this.
+- Intra-build cache is not yet exposed as a utility API so an internal equivalent has been implemented temporarily. The TTL definitions are honored locally, but do not take effect when run in prod by the build bot.
