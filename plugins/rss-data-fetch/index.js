@@ -64,8 +64,6 @@ function netlifyPlugin(conf) {
 
       // support both json and xml formats (should we really?)
       if(url.indexOf(".js") != -1) {
-
-        console.log(`get ${url} as json`, url.indexOf(".js"));
         axios.get(url)
           .then(response => {
             // save the data to the cache
