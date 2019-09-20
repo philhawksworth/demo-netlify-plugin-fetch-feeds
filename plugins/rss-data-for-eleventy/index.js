@@ -2,7 +2,9 @@ const fs = require('fs');
 
 
 function netlifyPlugin(conf) {
+
   const DATA_DIR = conf.data_dir;
+
   return {
 
     // Hook into lifecycle
@@ -24,7 +26,6 @@ function netlifyPlugin(conf) {
             }
           });
 
-          console.log(file);
         });
       });
     }

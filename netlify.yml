@@ -1,7 +1,6 @@
 build:
   command: npm run build
   publish: dist
-  functions: src/functions
   NODE_ENV: 10.15.3
 
 plugins:
@@ -9,16 +8,16 @@ plugins:
       feeds:
         # - name: used as a key for accessing date later
         #   url: where to find this resource, in xml or json format
-        #   ttl:  don't get it again if cached less than this many seconds ago
+        #   ttl: don't fetch this again if cached less than this many seconds ago
         - name: hawksworx
           url: https://hawksworx.com/feed.json
-          ttl: 10
+          ttl: 60
         - name: netlify
           url: https://www.netlify.com/blog/index.xml
-          ttl: 60
-        - name: learnstartup
-          url: https://learnstartup.net/feed/
           ttl: 3600
+        - name: dwells
+          url: https://davidwells.io/rss.xml
+          ttl: 60
 
   - ./plugins/rss-data-for-eleventy:
       data_dir: src/site/_data

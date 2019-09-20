@@ -28,6 +28,7 @@ body {
   font-size: 16px;
   line-height: 1.8;
   min-height: 100vh;
+  padding-bottom: 5em;
   background:  $page-color;
   background: url(/images/bg-grid.png), linear-gradient(320deg, $page-color 0%, $accent-color 100%);
 

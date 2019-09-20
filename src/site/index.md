@@ -7,27 +7,25 @@ layout: layouts/base.njk
 
 ## RSS Feeds
 
-The pages found in in the posts
 <h2> Hawksworx</h2>
 <ul class="listing">
 {%- for item in hawksworx.entries.slice(0,5) -%}
-  <li>{{ item.title }}</li>
+  <li><a href="{{ item.link }}">{{ item.title }}</a></li>
 {%- endfor -%}
 </ul>
 
-
-
-<h2>Lean startup</h2>
-<ul class="listing">
-{%- for item in learnstartup.items.slice(0,5) -%}
-  <li>{{ item.title }}</li>
-{%- endfor -%}
-</ul>
 
 <h2>Netlify</h2>
 <ul class="listing">
 {%- for item in netlify.items.slice(0,5) -%}
-  <li>{{ item.title }}</li>
+  <li><a href="{{ item.link }}">{{ item.title }}</a></li>
 {%- endfor -%}
 </ul>
 
+
+<h2>DWells</h2>
+<ul class="listing">
+{%- for item in dwells.items.slice(0,5) -%}
+  <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+{%- endfor -%}
+</ul>
