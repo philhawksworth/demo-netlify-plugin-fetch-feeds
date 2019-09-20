@@ -30,8 +30,8 @@
     "postcss-mixins": "^6.2.1",
     "postcss-simple-vars": "^5.0.2",
     "precss": "^4.0.0",
-    "uglify-js": "^3.6.0",
-    "xml2js": "^0.4.19"
+    "rss-to-json": "^1.0.5",
+    "uglify-js": "^3.6.0"
   },
   "devDependencies": {
     "cross-env": "5.2.0"

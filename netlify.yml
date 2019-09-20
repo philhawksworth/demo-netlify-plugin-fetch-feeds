@@ -5,13 +5,20 @@ build:
   NODE_ENV: 10.15.3
 
 plugins:
-  - ./plugins/get-rss:
-      # right now the syntax needs to have items in order to work.
-      # But we can also add options here
-      #enabled: true
-      # someEnv: ${env.myEnv, 'default_or_fallback'}
+  - ./plugins/rss-data-fetch:
       feeds:
+        # - name: used as a key for accessing date later
+        #   url: where to find this resource, in xml or json format
+        #   ttl:  don't get it again if cached less than this many seconds ago
         - name: hawksworx
           url: https://hawksworx.com/feed.json
-          ttl: 3600 # don't get it again if cached less than this many seconds ago
-        # - netlify: https://www.netlify.com/blog/index.xml
+          ttl: 10
+        - name: netlify
+          url: https://www.netlify.com/blog/index.xml
+          ttl: 60
+        - name: learnstartup
+          url: https://learnstartup.net/feed/
+          ttl: 3600
+
+  - ./plugins/rss-data-for-eleventy:
+      data_dir: src/site/_data
