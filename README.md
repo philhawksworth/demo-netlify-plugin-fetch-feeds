@@ -29,7 +29,7 @@ npx eleventy --serve
 
 ## Defining the RSS feeds
 
-MAke more RSS feeds available to the SSG by defining them in the netlify.yml file
+Make more RSS feeds available to the SSG by defining them in the netlify.yml file
 
 ```yaml
 
