@@ -11,13 +11,13 @@ plugins:
         #   ttl: don't fetch this again if cached less than this many seconds ago
         - name: hawksworx
           url: https://hawksworx.com/feed.json
-          ttl: 60
+          ttl: 180
         - name: netlify
           url: https://www.netlify.com/blog/index.xml
           ttl: 3600
         - name: dwells
           url: https://davidwells.io/rss.xml
-          ttl: 60
+          ttl: 180
 
   - ./plugins/rss-data-for-eleventy:
       data_dir: src/site/_data
