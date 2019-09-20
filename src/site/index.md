@@ -4,8 +4,11 @@ subtitle: Get data from RSS feeds so that our static sited generator can use it 
 layout: layouts/base.njk
 ---
 
-Entries from differnet RSS feeds are available to use in the static site generator which generated this site thanks to the Netlify plugin which sources them. Once sourced, they can be used in the temapltes via a collections. Adding more RSS feeds to include in template is as simple as adding to <a href="{{ pkg.repository.url }}blob/master/netlify.yml">the netlify.yml config.</a>
+Entries from RSS feeds are available to use in the static site generator which generated this site thanks to the Netlify plugin which sources them. Once sourced, they can be used in the temapltes via a collections.
 
+Adding more RSS feeds to include in template is as simple as adding to <a href="{{ pkg.repository.url }}blob/master/netlify.yml">the netlify.yml config.</a>
+
+Code avaioable in the <a href="{{ pkg.repository.url }}">Git Repo</a>.
 
 <h2>Netlify blog</h2>
 <ul class="listing">
