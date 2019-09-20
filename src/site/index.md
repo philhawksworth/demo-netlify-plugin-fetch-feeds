@@ -8,7 +8,7 @@ Entries from RSS feeds are available to use in the static site generator which g
 
 Adding more RSS feeds to include in template is as simple as adding to <a href="{{ pkg.repository.url }}blob/master/netlify.yml">the netlify.yml config.</a>
 
-Code avaioable in the <a href="{{ pkg.repository.url }}">Git Repo</a>.
+Code available in the <a href="{{ pkg.repository.url }}">Git Repo</a>.
 
 <h2>Netlify blog</h2>
 <ul class="listing">
