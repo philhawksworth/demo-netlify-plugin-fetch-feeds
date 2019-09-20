@@ -2,6 +2,8 @@
 
 Experimenting with the plugin architecture to pull in RSS data for any SSG to use in its templates.
 
+https://phils-test-build.netlify.com
+
 ## Usage
 
 ```bash
