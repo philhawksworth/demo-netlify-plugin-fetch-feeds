@@ -9,7 +9,7 @@ function netlifyPlugin(conf) {
 
     // Hook into lifecycle
     prebuild: (data) => {
-      const PLUGIN_CACHE_DIR = `${data.constants.CACHE_DIR}/rss-plugin-data`;
+      const PLUGIN_CACHE_DIR = `${data.constants.CACHE_DIR}/netlify-plugin-fetch-feeds`;
       // ensure the target directory exists
       if (!fs.existsSync(DATA_DIR)){
         fs.mkdirSync(DATA_DIR, {recursive: true})
