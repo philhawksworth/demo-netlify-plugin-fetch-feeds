@@ -4,7 +4,7 @@ build:
   NODE_ENV: 10.15.3
 
 plugins:
-  - ./plugins/rss-data-fetch:
+  - netlify-plugin-fetch-feeds:
     # Make the content from these feeds available to templates
     # in our SSG via a collection with a given name
       feeds:
