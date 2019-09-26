@@ -1,18 +1,18 @@
-# Test RSS Plugin
+# Demo Netlify Plugin: Fetch Feed
 
-Experimenting with the plugin architecture to pull in RSS data for any SSG to use in its templates.
+Experimenting with the plugin architecture to fetch RSS data for any SSG to use in its templates.
 
-https://phils-test-build.netlify.com
+https://demo-plugin-fetch-feed.netlify.com
 
 ## Usage
 
 ```bash
 
 # clone the repo
-git clone https://github.com/philhawksworth/test-build.git
+git clone https://github.com/philhawksworth/demo-netlify-plugin-fetch-feed.git
 
 # move into working directory and install dependencies
-cd test-build
+cd demo-netlify-plugin-fetch-feed
 npm install
 
 # ensure that you have the netlify build command available
@@ -35,7 +35,7 @@ Make more RSS feeds available to the SSG by defining them in the netlify.yml fil
 
 ```yaml
 
-- ./plugins/rss-data-fetch:
+- netlify-plugin-fetch-feeds:
   # Make the content from these feeds available to templates
   # in our SSG via a collection with a given name
     feeds:
