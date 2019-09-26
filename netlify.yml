@@ -24,5 +24,5 @@ plugins:
           url: https://davidwells.io/rss.xml
           ttl: 180
 
-  - ./plugins/rss-data-for-eleventy:
+  - netlify-plugin-yield-data-for-eleventy:
       data_dir: src/site/_data
