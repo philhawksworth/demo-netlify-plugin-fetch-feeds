@@ -30,8 +30,6 @@ body {
   min-height: 100vh;
   padding-top: 2em;
   padding-bottom: 5em;
-  background:  $page-color;
-  background: url(/images/bg-grid.png), linear-gradient(320deg, $page-color 0%, $accent-color 100%);
 
   @media (min-width: $narrow) {
     font-size: 18px;
@@ -81,7 +79,7 @@ p {
 .subtitle {
   font-size: 1.2em;
   margin-top: 1em;
-  margin-bottom: 5em;
+  margin-bottom: 3em;
 }
 
 ul, ol {
@@ -201,4 +199,11 @@ footer {
     color: $text-color;
     border-bottom: solid 1px $text-color;
   }
+}
+
+blockquote {
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  background-color: mix($text-color, $page-color, 10%);
 }

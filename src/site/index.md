@@ -1,14 +1,16 @@
 ---
-title: RSS plugin
+title: "Netlify Plugin Demo: fetch-feed"
 subtitle: Get data from RSS feeds so that our static sited generator can use it in its templates.
 layout: layouts/base.njk
 ---
+
+> This site demonstrates use of the [netlify-plugin-fetch-feeds](https://github.com/philhawksworth/netlify-plugin-fetch-feeds) Build plugin for [Netlify](https://netlify.com)
 
 Entries from RSS feeds are available to use in the static site generator which generated this site thanks to the Netlify plugin which sources them. Once sourced, they can be used in the temapltes via a collections.
 
 Adding more RSS feeds to include in template is as simple as adding to <a href="{{ pkg.repository.url }}blob/master/netlify.yml">the netlify.yml config.</a>
 
-Code available in the <a href="{{ pkg.repository.url }}">Git Repo</a>.
+> Code available for this demo site in the <a href="{{ pkg.repository.url }}">Git Repo</a>.
 
 <h2>Netlify blog</h2>
 <ul class="listing">
