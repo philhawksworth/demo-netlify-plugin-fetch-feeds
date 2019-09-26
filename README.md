@@ -2,9 +2,16 @@
 
 Experimenting with the plugin architecture to fetch RSS data for any SSG to use in its templates.
 
-https://demo-plugin-fetch-feed.netlify.com
+Example site: https://demo-plugin-fetch-feed.netlify.com
+
+This demonstrates use of the following Netlify Plugins:
+
+- [netlify-plugin-fetch-feeds](https://github.com/philhawksworth/netlify-plugin-fetch-feeds)
+- netlify-plugin-yield-data-for-eleventy (yet to be packaged and published)
 
 ## Usage
+
+Instructions for running a version of this demo site for yourself.
 
 ```bash
 
@@ -24,20 +31,19 @@ netlify-build
 ```
 
 You can inspect the output in `/dist` or use the static site generator utilities to serve the site
+
 ```
 npx eleventy --serve
 ```
-
 
 ## Defining the RSS feeds
 
 Make more RSS feeds available to the SSG by defining them in the netlify.yml file
 
 ```yaml
-
 - netlify-plugin-fetch-feeds:
-  # Make the content from these feeds available to templates
-  # in our SSG via a collection with a given name
+    # Make the content from these feeds available to templates
+    # in our SSG via a collection with a given name
     feeds:
       # - name: used as a key for our data collection
       #   url: where to find this resource, in xml or json format
@@ -48,7 +54,6 @@ Make more RSS feeds available to the SSG by defining them in the netlify.yml fil
       - name: hawksworx
         url: https://hawksworx.com/feed.json
         ttl: 180
-
 ```
 
 ## Known issues
