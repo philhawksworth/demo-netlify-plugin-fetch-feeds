@@ -12,14 +12,14 @@ Code available in the <a href="{{ pkg.repository.url }}">Git Repo</a>.
 
 <h2>Netlify blog</h2>
 <ul class="listing">
-{%- for item in netlify.items.slice(0,5) -%}
+{%- for item in netlify.items.slice(0,4) -%}
   <li><a href="{{ item.link }}">{{ item.title }}</a></li>
 {%- endfor -%}
 </ul>
 
 <h2>Netlify on Medium</h2>
 <ul class="listing">
-{%- for item in medium.items.slice(0,5) -%}
+{%- for item in medium.items.slice(0,4) -%}
   <li><a href="{{ item.link }}">{{ item.title }}</a></li>
 {%- endfor -%}
 </ul>
@@ -27,7 +27,7 @@ Code available in the <a href="{{ pkg.repository.url }}">Git Repo</a>.
 
 <h2>Hawksworx</h2>
 <ul class="listing">
-{%- for item in hawksworx.entries.slice(0,5) -%}
+{%- for item in hawksworx.entries.slice(0,4) -%}
   <li><a href="{{ item.link }}">{{ item.title }}</a></li>
 {%- endfor -%}
 </ul>
@@ -35,7 +35,7 @@ Code available in the <a href="{{ pkg.repository.url }}">Git Repo</a>.
 
 <h2>Mr DWells</h2>
 <ul class="listing">
-{%- for item in dwells.items.slice(0,5) -%}
+{%- for item in dwells.items.slice(0,4) -%}
   <li><a href="{{ item.link }}">{{ item.title }}</a></li>
 {%- endfor -%}
 </ul>
