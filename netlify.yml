@@ -3,10 +3,13 @@ build:
   publish: dist
   NODE_ENV: 10.15.3
 
+
 plugins:
-  - netlify-plugin-fetch-feeds:
-    # Make the content from these feeds available to templates
-    # in our SSG via a collection with a given name
+  # Make the content from these feeds available to templates
+  # in our SSG via a collection with a given name
+  fetch-feeds:
+    type: netlify-plugin-fetch-feeds
+    config:
       feeds:
         # - name: used as a key for our data collection
         #   url: where to find this resource, in xml or json format
@@ -19,10 +22,14 @@ plugins:
           ttl: 3600
         - name: hawksworx
           url: https://hawksworx.com/feed.json
-          ttl: 180
+          ttl: 5
         - name: dwells
           url: https://davidwells.io/rss.xml
           ttl: 180
 
-  - netlify-plugin-yield-data-for-eleventy:
+  prime-eleventy:
+    type: netlify-plugin-yield-data-for-eleventy
+    config:
       data_dir: src/site/_data
+      cache_sources: # An array of folders within the netlify cache where data should be sourced
+        - netlify-plugin-fetch-feeds
