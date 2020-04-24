@@ -13,8 +13,8 @@
     [[plugins.inputs.feeds]]
       name = "hawksworx"
       url = "https://hawksworx.com/feed.json"
-      ttl = 10
+      ttl = 120   # Cache for 2 minutes
     [[plugins.inputs.feeds]]
       name = "netlify"
       url = "https://www.netlify.com/blog/index.xml"
-      ttl = 86400
+      ttl = 86400   # Cache for 24 hours
