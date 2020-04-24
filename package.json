@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/philhawksworth/demo-netlify-plugin-fetch-feed/"
+    "url": "https://github.com/philhawksworth/demo-netlify-plugin-fetch-feeds/"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",
-    "netlify-plugin-fetch-feeds": "^0.2.1"
+    "netlify-plugin-fetch-feeds": "^0.2.2"
   }
 }
