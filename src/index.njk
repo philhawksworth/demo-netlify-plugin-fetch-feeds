@@ -1,0 +1,47 @@
+---
+title: "Netlify Plugin Demo: fetch-feed"
+subtitle: Fetch and cache data from resources ready for a static site generator to use
+layout: layouts/base.njk
+---
+
+<p>
+This site demonstrates <a href="https://github.com/philhawksworth/netlify-plugin-fetch-feeds">netlify-plugin-fetch-feeds</a>, a <a href="https://docs.netlify.com/configure-builds/build-plugins/{{ site.utm }}">Build plugin</a> for <a href="https://netlify.com{{ site.utm }}">Netlify</a>
+</p>
+<p>
+  Code for this demo site in available in on <a href="{{ pkg.repository.url }}">GitHub</a>.
+</p>
+<p>
+  When this example site is generated, the build plugin requests (and caches for future builds) these feeds:
+</p>
+<ul>
+  <li><a href="https://www.netlify.com/blog/index.xml{{ site.utm }}">https://www.netlify.com/blog/index.xml</a></li>
+  <li><a href="https://hawksworx.com/feed.json">https://hawksworx.com/feed.json</a></li>
+</ul>
+<p>
+  The data feeds and the duration of their caching can be configured in <a href="{{ pkg.repository.url }}blob/master/netlify.toml">the netlify.toml</a> config file. Once requested, the data is available for the site generator to use as below.
+</p>
+
+<h2>Netlify blog</h2>
+<ul class="listing">
+{%- for item in netlify.rss.channel.item.slice(0,4) -%}
+  <li><a href="{{ item.link }}{{ site.utm }}">{{ item.title }}</a></li>
+{%- endfor -%}
+</ul>
+
+<h2>Hawksworx</h2>
+<ul class="listing">
+{%- for item in hawksworx.entries.slice(0,4) -%}
+  <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+{%- endfor -%}
+</ul>
+
+<hr />
+
+<h2>Quick try-out</h2>
+<p>
+  To quickly experiment with this plugin, you can click the button below. Clicking the button will clone <a href="{{ pkg.repository.url }}">this test site repo</a>, setup a new site <a href="https://netlify.com{{ site.utm }}">on Netlify</a> and deploy the site complete with the plugin configured and operational.
+</p>
+<p>
+  <a href="https://app.netlify.com/start/deploy?repository={{ pkg.repository.url }}"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+</p>
+

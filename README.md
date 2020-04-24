@@ -40,23 +40,24 @@ npx eleventy --serve
 
 Make more RSS feeds available to the SSG by defining them in the netlify.yml file
 
-```yaml
-- netlify-plugin-fetch-feeds:
-    # Make the content from these feeds available to templates
-    # in our SSG via a collection with a given name
-    feeds:
-      # - name: used as a key for our data collection
-      #   url: where to find this resource, in xml or json format
-      #   ttl: don't fetch this again if cached less than this many seconds ago
-      - name: netlify
-        url: https://www.netlify.com/blog/index.xml
-        ttl: 3600
-      - name: hawksworx
-        url: https://hawksworx.com/feed.json
-        ttl: 180
+```toml
+# Config for the Netlify Build Plugin: netlify-plugin-fetch-feeds
+[[plugins]]
+  package = "netlify-plugin-fetch-feeds"
+
+  [plugins.inputs]
+    # Where should data files reside
+    dataDir = "src/_data"
+
+    # All the feeds we wish to gather for use in the build
+    [[plugins.inputs.feeds]]
+      name = "hawksworx"
+      url = "https://hawksworx.com/feed.json"
+      ttl = 10
+    [[plugins.inputs.feeds]]
+      name = "netlify"
+      url = "https://www.netlify.com/blog/index.xml"
+      ttl = 86400
+
 ```
 
-## Known issues
-
-- Async operations in one Netlify Build life-cycle event are not guaranteed to have completed before the next event fires. Fetching RSS needs to handle this.
-- Intra-build cache is not yet exposed as a utility API so an internal equivalent has been implemented temporarily. The TTL definitions are honored locally, but do not take effect when run in prod by the build bot.

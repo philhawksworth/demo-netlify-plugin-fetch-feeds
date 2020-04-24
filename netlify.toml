@@ -1,0 +1,20 @@
+[build]
+  command = "npm run build"
+
+# Config for the Netlify Build Plugin: netlify-plugin-fetch-feeds
+[[plugins]]
+  package = "../netlify-plugin-fetch-feeds"
+
+  [plugins.inputs]
+    # Where should data files reside
+    dataDir = "src/_data"
+
+    # All the feeds we wish to gather for use in the build
+    [[plugins.inputs.feeds]]
+      name = "hawksworx"
+      url = "https://hawksworx.com/feed.json"
+      ttl = 10
+    [[plugins.inputs.feeds]]
+      name = "netlify"
+      url = "https://www.netlify.com/blog/index.xml"
+      ttl = 86400
