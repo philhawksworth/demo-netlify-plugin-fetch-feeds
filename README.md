@@ -12,4 +12,4 @@ You can try out this site and its plugin out by deploying it.
 
 Clicking the button below will clone this repo, setup a new site [on Netlify](https://netlify.com?utm_source=github&utm_medium=plugin-fetchfeeds-pnh&utm_campaign=devex) and deploy the site complete with the plugin configured and operational.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/philhawksworth/demo-netlify-plugin-fetch-feeds)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/philhawksworth/demo-netlify-plugin-fetch-feeds&utm_source=github&utm_medium=plugin-fetchfeeds-pnh&utm_campaign=devex)
