@@ -1,5 +1,6 @@
 [build]
   command = "npm run build"
+  publish = "dist"
 
 # Config for the Netlify Build Plugin: netlify-plugin-fetch-feeds
 [[plugins]]
